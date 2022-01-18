@@ -15,7 +15,7 @@ namespace Davi.CrudExample.Site.Data
         public MarketDBContext(IConfiguration configuration)
         {
             Configuration = configuration;
-            //this.ChangeTracker.LazyLoadingEnabled = false;
+            this.ChangeTracker.LazyLoadingEnabled = false;
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
@@ -38,6 +38,5 @@ namespace Davi.CrudExample.Site.Data
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
-
     }
 }

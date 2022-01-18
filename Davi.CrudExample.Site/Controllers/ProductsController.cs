@@ -34,15 +34,15 @@ namespace Davi.CrudExample.Site.Controllers
         }
 
         [HttpPost]
-        public RedirectToActionResult Save(long id, string Name, double price, string description, string imgLink)
+        public RedirectToActionResult Save(long id, string Name, double price, string description, string imgLink, long categoryId)
         {
             if(id > 0)
             {
-                _productRepository.Update(new Product(id, Name, price, description, imgLink));
+                _productRepository.Update(new Product(id, Name, price, description, imgLink, categoryId));
             }
             else
             {
-                var product = _productRepository.Create(new Product(0, Name, price, description, imgLink));
+                var product = _productRepository.Create(new Product(0, Name, price, description, imgLink, categoryId));
                 id = product.Id;
             }
 

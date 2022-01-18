@@ -1,0 +1,14 @@
+﻿@using Davi.CrudExample.Models;
+@model Category;
+@{
+}
+<form method="post" enctype="multipart/form-data" asp-controller="Categories" asp-action="Save" asp-route-id="@Model.Id">
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="@Model.Name" />
+    </div>
+    <div style="text-align: right;">
+        <input class="btn btn-success" type="submit" value="Save" />
+    </div>
+</form>

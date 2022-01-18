@@ -4,10 +4,6 @@
 }
 <form method="post" enctype="multipart/form-data" asp-controller="Products" asp-action="Save" asp-route-id="@Model.Id">
 
-    @*<div class="form-group" >
-        <label for="name">Id</label>
-        <input type="number" class="form-control" id="id" name="id" placeholder="0" value="@Model.Id" />
-    </div>*@
     <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="@Model.Name" />
@@ -23,6 +19,10 @@
     <div class="form-group">
         <label for="imgLink">Image Link</label>
         <input type="text" class="form-control" id="imgLink" name="imgLink" placeholder="Enter Image Link" value="@Model.ImgLink" />
+    </div>
+    <div class="form-group">
+        <label for="imgLink">Category Id</label>
+        <input type="number" class="form-control" id="category" name="categoryId" placeholder="Enter Category Id" value="@Model.CategoryId" />
     </div>
     <div style="text-align: right;">
         <input class="btn btn-success" type="submit" value="Save" />
