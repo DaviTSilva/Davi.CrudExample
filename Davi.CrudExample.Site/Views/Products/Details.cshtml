@@ -1,0 +1,30 @@
+﻿@using Davi.CrudExample.Models;
+@model Product;
+@{
+}
+<form method="post" enctype="multipart/form-data" asp-controller="Products" asp-action="Save" asp-route-id="@Model.Id">
+
+    @*<div class="form-group" >
+        <label for="name">Id</label>
+        <input type="number" class="form-control" id="id" name="id" placeholder="0" value="@Model.Id" />
+    </div>*@
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="@Model.Name" />
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" name="description" placeholder="Enter Description" value="@Model.Description" />
+    </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" id="price" name="price" placeholder="Enter the Price" value="@Model.Price" />
+    </div>
+    <div class="form-group">
+        <label for="imgLink">Image Link</label>
+        <input type="text" class="form-control" id="imgLink" name="imgLink" placeholder="Enter Image Link" value="@Model.ImgLink" />
+    </div>
+    <div style="text-align: right;">
+        <input class="btn btn-success" type="submit" value="Save" />
+    </div>
+</form>

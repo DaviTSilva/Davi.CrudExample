@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{E042BD75-B518-4AA9-9D26-8DE255421E22}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Davi.CrudExample.Models", "Davi.CrudExample.Models\Davi.CrudExample.Models.csproj", "{BE5B463F-4F78-400E-AC5E-5300A4D7D822}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Davi.CrudExample.Site", "Davi.CrudExample.Site\Davi.CrudExample.Site.csproj", "{08CE7F8E-318E-4625-BB6C-CE9F26C89508}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE5B463F-4F78-400E-AC5E-5300A4D7D822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE5B463F-4F78-400E-AC5E-5300A4D7D822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE5B463F-4F78-400E-AC5E-5300A4D7D822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE5B463F-4F78-400E-AC5E-5300A4D7D822}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08CE7F8E-318E-4625-BB6C-CE9F26C89508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08CE7F8E-318E-4625-BB6C-CE9F26C89508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08CE7F8E-318E-4625-BB6C-CE9F26C89508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08CE7F8E-318E-4625-BB6C-CE9F26C89508}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BE5B463F-4F78-400E-AC5E-5300A4D7D822} = {E042BD75-B518-4AA9-9D26-8DE255421E22}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5025C284-C02A-4FC8-9BE1-812541C9236A}
+	EndGlobalSection
+EndGlobal
