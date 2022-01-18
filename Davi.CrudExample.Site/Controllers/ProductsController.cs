@@ -1,6 +1,7 @@
 ﻿using Davi.CrudExample.Models;
 using Davi.CrudExample.Site.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,13 @@ namespace Davi.CrudExample.Site.Controllers
 {
     public class ProductsController : Controller
     {
-        private IRepository<Product> _productRepository;
+        private IRepository<Product> _productRepository; 
+        private IRepository<Category> _categoryRepository;
 
-        public ProductsController(IRepository<Product> productRepository)
+        public ProductsController(IRepository<Product> productRepository, IRepository<Category> categoryRespository)
         {
             _productRepository = productRepository;
+            _categoryRepository = categoryRespository;
         }
 
         public IActionResult Index()
@@ -25,7 +28,12 @@ namespace Davi.CrudExample.Site.Controllers
 
         public IActionResult Details(long id)
         {
-            if(id > 0)
+            List<SelectListItem> categoriesItems = new List<SelectListItem>();
+            var categories = _categoryRepository.Get();
+            categories.ToList().ForEach(c => categoriesItems.Add(new SelectListItem { Value = c.Id.ToString(), Text = c.Name }));
+            ViewBag.categories = categoriesItems;
+
+            if (id > 0)
             {
                 var product = _productRepository.Get(id);
                 return View(product);
